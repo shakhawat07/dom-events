@@ -10,7 +10,15 @@
 
 <body>
     <h1 onclick="alert('Do not click me!')">Events</h1>
-    <button onclick="alert('Good Job')">Click Me</button>
+    <button onclick="document.body.style.backgroundColor = 'yellow'">Click Me: Yellow</button>
+    <button onclick="bodyRed()">Click Me: Red</button>
+    <script src="js/event.js"></script>
+
+    <script>
+        function bodyRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+    </script>
 </body>
 
 </html>
