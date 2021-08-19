@@ -10,6 +10,38 @@
 
 <body>
     <h2>Event Delegate</h2>
+    <!-- ul#list-container>li.item*6>lorem2 -->
+    <ul id="item-container">
+        <li class="item">Lorem, ipsum.</li>
+        <li class="item">Explicabo, sapiente.</li>
+        <li class="item">Tempore, fugiat.</li>
+        <li class="item">Sequi, voluptatum.</li>
+        <li class="item">Autem, fugiat!</li>
+        <li class="item">Rem, iure?</li>
+    </ul>
+    <button id="add-item">Add Item</button>
+    <script>
+        const items = document.getElementsByClassName('item');
+        for (const item of items) {
+            item.addEventListener('click', function () {
+                // delete item 
+                // document.getElementById('item-container').removeChild(item);
+                // event.target.parentNode.removeChild(event.target);
+            })
+        };
+        // create new item 
+        document.getElementById('add-item').addEventListener('click', function () {
+            const li = document.createElement('li');
+            li.innerText = 'Brand New Item';
+            li.classList.add('item');
+            const parent = document.getElementById('item-container');
+            parent.appendChild(li);
+        })
+        // delete item 
+        document.getElementById('item-container').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target);
+        });
+    </script>
 </body>
 
 </html>
