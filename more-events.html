@@ -15,7 +15,6 @@
         <input id="delete-confirm" type="text" placeholder="Please type delete">
         <button id="delete-btn" disabled>Delete</button>
     </section>
-
     <script>
         document.getElementById('delete-btn').addEventListener('click', function () {
             document.getElementById('secret-info').style.display = 'none';
@@ -50,15 +49,12 @@
             else {
                 deleteBtn.setAttribute('disabled', true);
             }
-
         });
         // change
         document.getElementById('delete-confirm').addEventListener('change', function () {
             const deleteField = document.getElementById('delete-confirm');
             console.log(deleteField.value);
         });
-
-
     </script>
 </body>
 
